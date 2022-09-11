@@ -37,7 +37,7 @@ class UserRegistrationForm(UserCreationForm):
         queryset=BankAccountType.objects.all()
     )
     gender = forms.ChoiceField(choices=GENDER_CHOICE)
-    birth_date = forms.DateField()
+    birth_date = forms.DateField(widget= forms.TextInput(attrs={'placeholder':'YYYY-MM-DD'}))
 
     class Meta:
         model = User
