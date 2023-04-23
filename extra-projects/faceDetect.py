@@ -6,24 +6,29 @@ import numpy as np
 video_capture = cv2.VideoCapture(0)
 
 # Load a sample picture and learn how to recognize it.
-obama_image = face_recognition.load_image_file("obama.jpg")
+obama_image = face_recognition.load_image_file("extra-projects/obama.jpg")
 obama_face_encoding = face_recognition.face_encodings(obama_image)[0]
 
 # Load a second sample picture and learn how to recognize it.
-biden_image = face_recognition.load_image_file("biden.jpg")
+biden_image = face_recognition.load_image_file("extra-projects/biden.jpg")
 biden_face_encoding = face_recognition.face_encodings(biden_image)[0]
+# Load a second sample picture and learn how to recognize it.
+kuldeep_image = face_recognition.load_image_file("extra-projects/kuldeep.jpg")
+kuldeep_face_encoding = face_recognition.face_encodings(kuldeep_image)[0]
 
 
 # Create arrays of known face encodings and their names
 known_face_encodings = [
     obama_face_encoding,
     biden_face_encoding,
+    kuldeep_face_encoding
    
 
 ]
 known_face_names = [
     "Barack Obama",
     "Joe Biden",
+    "Kuldeep"
    
 ]
 
